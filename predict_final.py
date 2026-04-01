@@ -97,7 +97,7 @@ def main():
                 print(test + config+"_test.json")
                 # 正确拼接路径
 
-                file_path = os.path.join('MedINST/all_history_filter_all', f"{test}{config}_test.json")
+                file_path = os.path.join('all_history_filter_all', f"{test}{config}_test.json")
 
                 # 加载数据集
                 data = datasets.load_dataset('json', data_files=file_path)['train']
