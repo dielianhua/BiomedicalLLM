@@ -1,6 +1,6 @@
 # BiomedicalLLM
 
-This repository contains the official implementation and resources for the paper **"High-quality data selection-driven instruction tuning for biomedical large language models"**, published in the *Journal of Biomedical Informatics*.
+This repository contains the official evaluation code for the paper **"High-quality data selection-driven instruction tuning for biomedical large language models"**, published in the *Journal of Biomedical Informatics*.
 
 **Authors**: Jieqiong Zheng, Lu Sun, Xinyu He, Ruixia Cao
 
@@ -16,7 +16,7 @@ This study presents a novel data selection framework for enhancing the training 
 
 Specifically, our approach introduces the **Data Selection (DS) score**, a metric designed to quantify the extent to which instructions facilitate response generation by comparing model response losses under conditions with and without instructional context. Notably, we employed the DS method to filter high-quality data, and further fine-tuned the base model on the selected dataset; the resulting model was named **BiomedicalLLM**.
 
-##Evaluation code
+## Evaluation code
 
 ### 1.start server
 
@@ -39,9 +39,8 @@ python predict_final.py --name medinst_"$name" --dir . --model $path/$name --key
 ```
 python evaluation_final_filter.py --name medinst_"$name"  --dir . --original_data_dir ./all_history_filter_all
 
-## Citation
-
 ```
+## Citation
 If you find this work useful for your research, please cite:
 
 ```bibtex
@@ -57,3 +56,8 @@ url = {https://www.sciencedirect.com/science/article/pii/S1532046426000730},
 author = {Jieqiong Zheng and Lu Sun and Xinyu He and Ruixia Cao},
 keywords = {LLM, Biomedical instruction dataset, Data quality, Data selection, Natural language processing},
 }
+```
+
+```text
+Jieqiong Zheng, Lu Sun, Xinyu He, Ruixia Cao, High-quality data selection-driven instruction tuning for biomedical large language models, Journal of Biomedical Informatics, Volume 179, 2026, 105049, ISSN 1532-0464, https://doi.org/10.1016/j.jbi.2026.105049.
+```
